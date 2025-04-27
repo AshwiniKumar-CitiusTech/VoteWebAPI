@@ -1,0 +1,92 @@
+## Producing message to a topic 
+
+
+docker exec -it microservice_app-kafka-1 kafka-console-consumer --bootstrap-server localhost:9092 --topic votes-topic --from-beginning --max-messages 10
+
+{"Id":1,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{"Id":2,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{
+  "name": "Ashwini Kumar",
+  "age": 21,
+  "country": "India"
+}
+{
+  "name": "Ashwini Kumar",
+  "age": 21,
+Processed a total of 10 messages
+
+
+
+consuming message from a topic 
+kafka-console-consumer --bootstrap-server localhost:9092 --topic votes-topic  --from-beginning 
+
+{"Id":1,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{"Id":2,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{
+  "name": "Ashwini Kumar",
+  "age": 21,
+  "country": "India"
+}
+{
+  "name": "Ashwini Kumar",
+  "age": 21,
+  "country": "India"
+
+{"Id":3,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{"Id":4,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{"Id":5,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{"Id":6,"ContestantId":1,"VotedAt":"2025-04-26T04:21:51.696Z"}
+{  "name": "Ashwini Kumar",  "age": 21,  "country": "India"}
+
+
+
+
+# creating a consumer group
+
+bin/kafka-console-consumer.sh --bootstrap-server <BROKER_ADDRESS> --topic <TOPIC_NAME> --group <GROUP_NAME>
+
+
+
+multple topics consumer group 
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topics votes,contestants,results --group vote-consumer-group
+
+
+
+list topics 
+
+
+kafka-topics --bootstrap-server localhost:9092 --list
+
+
+
+list consumers
+
+kafka-consumer-groups --bootstrap-server localhost:9092 --list
+
+
+
+
+
+create topic
+
+kafka-topics --bootstrap-server localhost:9092 --create --topic votes-topic --partitions 3 --replication-factor 1
+
+
+
+
+
+
+
+Steps 
+
+1. start all services 
+2. start docker container using docker compose up , if any change then restart using down and up 
+3. list topics ,if not create 
+4. list consumer grouo , if not create 
+5. produce messages using api call
+6. conume messages using api call
+
+
+
+
