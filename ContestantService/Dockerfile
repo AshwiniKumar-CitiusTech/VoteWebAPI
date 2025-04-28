@@ -1,22 +1,24 @@
-# Use the official .NET 8 SDK image to build the application
+# Use the official .NET Core SDK as a parent image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copy the project files and restore dependencies
+# Copy the project file and restore any dependencies (use .csproj for the project name)
 COPY *.csproj ./
 RUN dotnet restore
 
-# Copy the remaining files and build the application
-COPY . ./
+# Copy the rest of the application code
+COPY . .
+
+# Publish the application
 RUN dotnet publish -c Release -o out
 
-# Use the official .NET 8 runtime image to run the application
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# Build the runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
 WORKDIR /app
-COPY --from=build /app/out .
+COPY --from=build /app/out ./
 
-# Expose the port your application runs on
+# Expose the port your application will run on
 EXPOSE 80
 
-# Set the entry point for the container
+# Start the application
 ENTRYPOINT ["dotnet", "ContestantService.dll"]
