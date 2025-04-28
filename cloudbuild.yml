@@ -1,18 +1,18 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/temp-j7ryensp-wsky/contestant-service:latest', '-f', 'ContestantService/Dockerfile', '.']
+  args: ['build', '-t', 'gcr.io/temp-j7ryensp-wsky/contestantservice', '-f', 'ContestantService/Dockerfile', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/temp-j7ryensp-wsky/contestant-service:latest']
+  args: ['push', 'gcr.io/temp-j7ryensp-wsky/contestantservice']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/temp-j7ryensp-wsky/result-service:latest', '-f', 'ResultService/Dockerfile', '.']
+  args: ['build', '-t', 'gcr.io/temp-j7ryensp-wsky/resultservice', '-f', 'ResultService/Dockerfile', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/temp-j7ryensp-wsky/result-service:latest']
+  args: ['push', 'gcr.io/temp-j7ryensp-wsky/resultservice']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/temp-j7ryensp-wsky/vote-service:latest', '-f', 'VoteService/Dockerfile', '.']
+  args: ['build', '-t', 'gcr.io/temp-j7ryensp-wsky/voteservice', '-f', 'VoteService/Dockerfile', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/temp-j7ryensp-wsky/vote-service:latest']
+  args: ['push', 'gcr.io/temp-j7ryensp-wsky/voteservice']
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', 'contestant-service-deployment.yaml']

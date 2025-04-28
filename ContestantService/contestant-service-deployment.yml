@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
       - name: contestant-service
-        image: gcr.io/your-project-id/contestant-service:latest
+        image: gcr.io/temp-j7ryensp-wsky/contestantservice
         ports:
         - containerPort: 80
         env:
         - name: CLOUD_SQL_CONNECTION_NAME
-          value: "your-project-id:us-central1:my-sql-instance"
+          value: "temp-j7ryensp-wsky:us-central1:vote-app-instance"
         - name: DB_USER
-          value: "your-db-user"
+          value: "vote-app-instance"
         - name: DB_PASS
-          value: "your-db-password"
+          value: "ASHWINI"
         - name: DB_NAME
-          value: "your-db-name"
+          value: "vote-app"
         volumeMounts:
         - name: cloudsql-instance-credentials
           mountPath: /secrets/cloudsql

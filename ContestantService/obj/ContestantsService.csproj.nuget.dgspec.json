@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\VoteService.csproj": {}
+    "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\VoteService.csproj": {
+    "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\VoteService.csproj",
-        "projectName": "VoteService",
-        "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\VoteService.csproj",
+        "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj",
+        "projectName": "ContestantsService",
+        "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj",
         "packagesPath": "C:\\Users\\AshwiniK10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\obj\\",
+        "outputPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AshwiniK10\\AppData\\Roaming\\NuGet\\NuGet.Config",

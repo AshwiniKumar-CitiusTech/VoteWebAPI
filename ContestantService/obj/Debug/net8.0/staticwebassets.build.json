@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "2m5zwynecx9ysu6iGaLOfGGF13mfNgJnclBi2nv5m50=",
-  "Source": "ContestantService",
-  "BasePath": "_content/ContestantService",
+  "Hash": "dALGPGcfCQihSTkCxf6sf2aRUHXJWOsIX8pLNLBmHwU=",
+  "Source": "ContestantsService",
+  "BasePath": "_content/ContestantsService",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

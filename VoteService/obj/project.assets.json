@@ -4622,11 +4622,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\VoteService\\VoteService.csproj",
+      "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\VoteService.csproj",
       "projectName": "VoteService",
-      "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\VoteService\\VoteService.csproj",
+      "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\VoteService.csproj",
       "packagesPath": "C:\\Users\\AshwiniK10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\VoteService\\obj\\",
+      "outputPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\VoteService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AshwiniK10\\AppData\\Roaming\\NuGet\\NuGet.Config",
