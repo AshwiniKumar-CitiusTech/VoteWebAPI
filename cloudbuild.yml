@@ -15,16 +15,16 @@ steps:
   args: ['push', 'gcr.io/temp-j7ryensp-wsky/vote-service:latest']
 
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', 'k8s/contestant-service-deployment.yaml']
+  args: ['apply', '-f', 'contestant-service-deployment.yaml']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', 'k8s/contestant-service-service.yaml']
+  args: ['apply', '-f', 'contestant-service-service.yaml']
 
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', 'k8s/result-service-deployment.yaml']
+  args: ['apply', '-f', 'result-service-deployment.yaml']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', 'k8s/result-service-service.yaml']
+  args: ['apply', '-f', 'result-service-service.yaml']
 
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', 'k8s/vote-service-deployment.yaml']
+  args: ['apply', '-f', 'vote-service-deployment.yaml']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['apply', '-f', 'k8s/vote-service-service.yaml']
+  args: ['apply', '-f', 'vote-service-service.yaml']
