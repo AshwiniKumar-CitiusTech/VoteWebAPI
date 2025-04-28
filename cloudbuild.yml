@@ -30,5 +30,5 @@ steps:
   args: ['apply', '-f', 'vote-service-service.yaml']
 
 options:
-logging: CLOUD_LOGGING_ONLY
+  logging: CLOUD_LOGGING_ONLY
 
