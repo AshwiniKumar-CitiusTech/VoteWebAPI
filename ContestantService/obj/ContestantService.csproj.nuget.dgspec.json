@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ashwinismac/Desktop/Microservice_App/ContestantService/ContestantService.csproj": {}
+    "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\ContestantService\\ContestantService.csproj": {}
   },
   "projects": {
-    "/Users/ashwinismac/Desktop/Microservice_App/ContestantService/ContestantService.csproj": {
+    "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\ContestantService\\ContestantService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ashwinismac/Desktop/Microservice_App/ContestantService/ContestantService.csproj",
+        "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\ContestantService\\ContestantService.csproj",
         "projectName": "ContestantService",
-        "projectPath": "/Users/ashwinismac/Desktop/Microservice_App/ContestantService/ContestantService.csproj",
-        "packagesPath": "/Users/ashwinismac/.nuget/packages/",
-        "outputPath": "/Users/ashwinismac/Desktop/Microservice_App/ContestantService/obj/",
+        "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\ContestantService\\ContestantService.csproj",
+        "packagesPath": "C:\\Users\\AshwiniK10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AshwiniK10\\Desktop\\VotingApi\\ContestantService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ashwinismac/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\AshwiniK10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,17 +55,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.0, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -89,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

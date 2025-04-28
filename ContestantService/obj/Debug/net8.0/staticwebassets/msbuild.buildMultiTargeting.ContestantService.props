@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../build/ContestantService.props" />
+  <Import Project="..\build\ContestantService.props" />
 </Project>
