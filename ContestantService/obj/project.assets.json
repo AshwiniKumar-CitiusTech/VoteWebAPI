@@ -4622,9 +4622,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj",
-      "projectName": "ContestantsService",
-      "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj",
+      "projectUniqueName": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantService.csproj",
+      "projectName": "ContestantService",
+      "projectPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantService.csproj",
       "packagesPath": "C:\\Users\\AshwiniK10\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\obj\\",
       "projectStyle": "PackageReference",

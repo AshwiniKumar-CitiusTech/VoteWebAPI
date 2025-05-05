@@ -1,22 +1,23 @@
-# Use the official .NET 8 SDK image to build the application
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+ # Use the official .NET SDK image to build the app
+ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+ WORKDIR /src
 
-# Copy the project files and restore dependencies
-COPY *.csproj ./
-RUN dotnet restore
+ # Copy csproj and restore as distinct layers
+ COPY ResultService.csproj ./
+ RUN dotnet restore
 
-# Copy the remaining files and build the application
-COPY . ./
-RUN dotnet publish -c Release -o out
+ # Copy everything else and build
+ COPY . ./
+ RUN dotnet publish -c Release -o /app/out
 
-# Use the official .NET 8 runtime image to run the application
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out .
+ # Build runtime image
+ FROM mcr.microsoft.com/dotnet/aspnet:8.0
+ WORKDIR /app
+ COPY --from=build-env /app/out .
 
-# Expose the port your application runs on
-EXPOSE 80
+ # Expose port
+ EXPOSE 80
 
-# Set the entry point for the container
-ENTRYPOINT ["dotnet", "ResultService.dll"]
+ # Set the entry point for the container
+ ENTRYPOINT ["dotnet", "ResultService.dll"]
+ 

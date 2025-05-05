@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X6g2+jlmX/o=",
+  "dgSpecHash": "1g/5dZL7QIo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantsService.csproj",
+  "projectFilePath": "C:\\Users\\AshwiniK10\\Desktop\\VoteWebAPI\\ContestantService\\ContestantService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AshwiniK10\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\AshwiniK10\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

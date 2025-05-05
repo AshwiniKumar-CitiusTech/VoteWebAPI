@@ -1,24 +1,23 @@
-# Use the official .NET Core SDK as a parent image
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+ # Use the official .NET SDK image to build the app
+ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+ WORKDIR /src
 
-# Copy the project file and restore any dependencies (use .csproj for the project name)
-COPY *.csproj ./
-RUN dotnet restore
+ # Copy csproj and restore as distinct layers
+ COPY ContestantService.csproj ./
+ RUN dotnet restore
 
-# Copy the rest of the application code
-COPY . .
+ # Copy everything else and build
+ COPY . ./
+ RUN dotnet publish -c Release -o /app/out
 
-# Publish the application
-RUN dotnet publish -c Release -o out
+ # Build runtime image
+ FROM mcr.microsoft.com/dotnet/aspnet:8.0
+ WORKDIR /app
+ COPY --from=build-env /app/out .
 
-# Build the runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/out ./
+ # Expose port
+ EXPOSE 80
 
-# Expose the port your application will run on
-EXPOSE 80
-
-# Start the application
-ENTRYPOINT ["dotnet", "ContestantService.dll"]
+ # Set the entry point for the container
+ ENTRYPOINT ["dotnet", "ContestantService.dll"]
+ 
